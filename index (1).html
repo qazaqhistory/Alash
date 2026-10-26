@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="kk"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Алаш: XX ғасыр басындағы Қазақстан</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#f7f2e8;--c:#fff;--t:#1d2530;--m:#5c6672;--a:#0a7285;--g:#c28a1c;--b:#e4dccb;--ok:#2e8b57;--no:#c0392b;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11171d;--c:#1b232c;--t:#ebe6da;--m:#9aa5b1;--a:#4cc3d9;--g:#e0a93b;--b:#2b3540;--ok:#5fcf8c;--no:#ff7a6b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11171d;--c:#1b232c;--t:#ebe6da;--m:#9aa5b1;--a:#4cc3d9;--g:#e0a93b;--b:#2b3540;--ok:#5fcf8c;--no:#ff7a6b;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--c);z-index:10}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--c);border-bottom:1px solid var(--b)}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:8px 14px}
+.hd b{color:var(--a)}
+nav{display:flex;gap:6px;overflow-x:auto;padding:0 10px 8px;scrollbar-width:none}
+nav button,.chip{flex:none;border:1px solid var(--b);background:var(--bg);color:var(--t);border-radius:99px;padding:6px 13px;font:inherit;font-size:14px;cursor:pointer}
+nav button.on,.chip.on{background:var(--a);color:#fff;border-color:var(--a)}
+main{max-width:860px;margin:0 auto;padding:14px;animation:up .4s}
+@keyframes up{from{opacity:0;transform:translateY(8px)}}
+h2{margin:6px 0 10px}h3{margin:0 0 8px}
+.m{color:var(--m)}
+.card,.ev,.pc,.th,.vid,.ti{background:var(--c);border:1px solid var(--b);border-radius:14px;padding:12px 14px;margin:8px 0}
+.hero{border-radius:18px;padding:26px 18px;color:#fff;background:linear-gradient(120deg,#0a7285,#1c4f8a,#c28a1c,#0a7285);background-size:300% 300%;animation:bg 14s ease infinite}
+@keyframes bg{50%{background-position:100% 50%}}
+.hero h1{margin:0 0 8px;font-size:clamp(22px,6vw,34px);line-height:1.2}
+.st{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.st span{background:rgba(255,255,255,.2);border-radius:10px;padding:6px 12px;font-size:14px}
+.btn{border:0;border-radius:10px;padding:10px 16px;background:var(--g);color:#1b1b1b;font:inherit;font-weight:600;cursor:pointer;margin:4px 6px 4px 0}
+.btn.alt{background:#fff;color:#0a4a58}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px}
+.vid{display:block;text-decoration:none;color:var(--t)}
+.vid i{font-style:normal;display:grid;place-items:center;height:90px;border-radius:10px;background:linear-gradient(135deg,var(--a),var(--g));color:#fff;font-size:34px;margin-bottom:8px}
+.th{display:flex;gap:10px;align-items:flex-start}
+.th b,.av{flex:none;width:34px;height:34px;border-radius:50%;background:var(--a);color:#fff;display:grid;place-items:center}
+.pc{display:flex;gap:12px}.pc p{margin:2px 0 0}.pc small{display:block;color:var(--g)}
+.ev{display:flex;gap:10px}.ev b{flex:none;color:var(--a);min-width:44px}
+.tl{border-left:3px solid var(--g);margin-left:8px;padding-left:12px}
+.ti{position:relative}.ti::before{content:"";position:absolute;left:-23px;top:16px;width:13px;height:13px;border-radius:50%;background:var(--a);border:2px solid var(--bg)}
+.ti b{color:var(--a)}.ti p{margin:2px 0 0}
+.map{width:100%;height:auto;background:var(--c);border:1px solid var(--b);border-radius:14px}
+.land{fill:var(--b);stroke:var(--g);stroke-width:2}
+.lbl{fill:var(--m);font-size:15px;text-anchor:middle;letter-spacing:3px}
+.pin{cursor:pointer}.pin circle{fill:var(--a)}.pin .pulse{fill:var(--a);opacity:.3;animation:p 2s infinite}
+@keyframes p{to{r:24;opacity:0}}
+.pt{fill:var(--t);font-size:13px;text-anchor:middle;font-weight:600}
+details{background:var(--c);border:1px solid var(--b);border-radius:12px;padding:10px 14px;margin:8px 0}
+summary{cursor:pointer;font-weight:600;color:var(--a)}
+.bars{display:flex;align-items:flex-end;gap:5px;height:150px;padding:8px 0}
+.bars div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;font-size:11px}
+.bars i{display:block;width:100%;background:var(--a);border-radius:5px 5px 0 0;min-height:4px;transition:height .6s}
+.im{width:100%;height:auto}.im rect{fill:var(--bg);stroke:var(--g);stroke-width:2}.im path{stroke:var(--m);fill:none;stroke-width:2}.im text{fill:var(--t);font-size:14px;text-anchor:middle}.im .s{fill:var(--no);stroke:none}
+.op{display:block;padding:8px 10px;border:1px solid var(--b);border-radius:10px;margin:5px 0;cursor:pointer}
+.sel{width:100%;padding:8px;border-radius:8px;border:1px solid var(--b);background:var(--bg);color:var(--t);font:inherit;margin:3px 0 8px}
+.bar{height:12px;background:var(--b);border-radius:9px;overflow:hidden;margin:6px 0}.bar i{display:block;height:100%;background:var(--ok);transition:width .6s}
+.big{font-size:22px;font-weight:700;margin:6px 0}.fb{color:var(--g);font-weight:600}
+.eb{display:block;width:100%;text-align:left;margin:6px 0;padding:10px 12px;border-radius:10px;border:1px solid var(--b);background:var(--bg);color:var(--t);font:inherit;cursor:pointer}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}
+footer{text-align:center;color:var(--m);font-size:13px;padding:20px}
+
+h1,h2,.yr{font-family:'Noto Serif',Georgia,serif}
+.rv{opacity:0;transform:translateY(20px) scale(.98);transition:opacity .6s,transform .35s,box-shadow .3s}.rv.in{opacity:1;transform:none}
+.hv{cursor:pointer}.hv:hover{transform:translateY(-4px) rotate(-.4deg);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.sp{position:fixed;top:0;left:0;height:3px;width:0;z-index:20;background:linear-gradient(90deg,var(--g),var(--a))}
+.hero{position:relative;overflow:hidden;padding:0;min-height:470px;display:flex;align-items:flex-end;animation:none;background:#16324d}
+.hero>svg{position:absolute;inset:0;width:100%;height:100%}
+.hero .tx{position:relative;padding:70px 18px 22px;width:100%;background:linear-gradient(transparent,rgba(6,16,28,.9) 45%)}
+.kick{letter-spacing:.18em;color:#ffd98a;font-weight:600;font-size:12px}
+.sun{animation:sun 3s ease-out both}@keyframes sun{from{transform:translateY(60px)}}
+.cl{animation:dr 30s linear infinite alternate}@keyframes dr{to{transform:translateX(80px)}}
+.rd{animation:ride 26s linear infinite}@keyframes ride{from{transform:translateX(-80px)}to{transform:translateX(680px)}}
+.bd{animation:fly 16s linear infinite}@keyframes fly{from{transform:translateX(-30px)}to{transform:translateX(640px)}}
+.sm{animation:sm 3s ease-in-out infinite}@keyframes sm{50%{transform:translateY(-6px);opacity:.3}}
+.ic{font-size:30px}.yr{font-size:46px;font-weight:700;color:var(--g)}#rg{width:100%;accent-color:var(--g)}
+.ti:not(.on) p,.ti:not(.on) b{opacity:.3}.ti:not(.on)::before{background:var(--b)}
+.ok2{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,var(--c))}
+.pop{animation:pop .4s}@keyframes pop{from{transform:scale(.95);opacity:0}}
+.dn{animation:dn 1.4s ease-out both}@keyframes dn{from{stroke-dasharray:0 400}}
+.dn2,.ring{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.sea{fill:#4a8fa8;opacity:.55}.riv{fill:none;stroke:#4a8fa8;stroke-width:2;opacity:.6}
+.rail{fill:none;stroke:var(--no);stroke-width:2.5;stroke-dasharray:6 5;animation:dash 1.2s linear infinite}@keyframes dash{to{stroke-dashoffset:-22}}
+.upz{fill:var(--no);opacity:.2;animation:bl 2s infinite alternate}@keyframes bl{to{opacity:.45}}
+.lb2{fill:var(--m);font-size:11px;text-anchor:middle}
+.mw.norail .rail,.mw.noup .upz,.mw.nogeo .sea,.mw.nogeo .riv{display:none}
+.ps{display:block;width:100%}figure.ph{margin:8px 0;background:var(--c);border:1px solid var(--b);border-radius:12px;overflow:hidden}
+figure.ph svg{transition:transform .5s}figure.ph:hover svg{transform:scale(1.07)}figcaption{padding:8px 10px;font-size:13px;color:var(--m)}
+.vt{position:relative;border-radius:10px;overflow:hidden;margin-bottom:8px}.vt svg{display:block;width:100%}
+.play{position:absolute;inset:0;margin:auto;width:48px;height:48px;border-radius:50%;background:rgba(0,0,0,.6);color:#fff;display:grid;place-items:center;animation:pl 1.6s infinite}@keyframes pl{50%{transform:scale(1.15)}}
+.pc2{display:flex;flex-direction:column;min-width:0}.ph2{display:flex;gap:12px;align-items:center;margin-bottom:8px}.ph2>div:last-child{min-width:0}.pf{width:88px;height:104px;flex:none;border-radius:12px;overflow:hidden;background:var(--b);box-shadow:0 2px 10px rgba(0,0,0,.25)}.pf svg,.pf img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}.pf img{filter:grayscale(.25) sepia(.2) contrast(1.05)}.pf svg{filter:sepia(.3)}
+.pc2 small{display:block;color:var(--g)}.pc2 p{margin:0 0 4px}.lf{position:relative;overflow:hidden;height:6px;border-radius:4px;background:var(--b);margin-top:auto}.pc2 .lf{margin-top:10px}
+.lf i{position:absolute;top:0;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--a),var(--g));transform-origin:left;animation:gr2 1.2s both}@keyframes gr2{from{transform:scaleX(0)}}
+.bars i{transform-origin:bottom;animation:gr .9s both}@keyframes gr{from{transform:scaleY(0)}}
+.md{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;place-items:center;z-index:30;padding:14px}.md.on{display:grid}
+.mb{background:var(--c);border-radius:16px;max-width:620px;width:100%;padding:14px;position:relative;max-height:92vh;overflow:auto}
+.x{position:absolute;right:8px;top:8px;z-index:2;border:0;background:rgba(0,0,0,.55);color:#fff;border-radius:50%;width:32px;height:32px;cursor:pointer}
+.stage{overflow:hidden;border-radius:10px;margin-top:24px}.stage svg{display:block;width:100%}.kb{animation:kb 6s ease-out both}@keyframes kb{from{transform:scale(1)}to{transform:scale(1.2) translate(-3%,-2%)}}
+.cap{min-height:72px}.dots{display:flex;gap:6px}.dots i{flex:1;height:4px;border-radius:3px;background:var(--b)}.dots i.on{background:var(--g)}
+.ctl{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.ctl a{text-decoration:none}.cf{position:fixed;inset:0;pointer-events:none;z-index:40}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style><link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&display=swap" rel="stylesheet"></head><body>
+<div class="top"><div class="hd"><span><b>Алаш</b> · тарих порталы</span><button class="chip" data-a="th" aria-label="Тақырып">🌓</button></div><nav id="nav"></nav></div>
+<main id="m"></main>
+<footer>Оқу жобасы · суреттер мен карта – схемалық иллюстрациялар</footer>
+<script>
+const $=s=>document.querySelector(s),E=s=>[...document.querySelectorAll(s)];
+const S=[["home","Басты бет"],["map","Карта"],["time","Хронология"],["learn","Оқу"],["pers","Тұлғалар"],["ev","Оқиғалар"],["data","Деректер"],["game","Ойын"],["terms","Терминдер"],["res","Нәтиже"]];
+let cur="home",G=0,flt="",pin="",m4=0,s4=0,o5=[],msg="",R={};
+try{R=JSON.parse(localStorage.getItem("alash")||"{}")}catch(e){}
+const sv=()=>{try{localStorage.setItem("alash",JSON.stringify(R))}catch(e){}};
+const TH=["XX ғасыр басында қазақ жері Ресей империясының құрамында болды және Дала мен Түркістан өлкелеріне бөлініп басқарылды.","Столыпиннің аграрлық реформасы кезінде қоныс аудару күшейіп, қазақтар құнарлы жайылымнан айырыла бастады.","1905 жылғы революция қазақ зиялыларын ашық саяси әрекетке итермеледі.","Қарқаралы петициясы халықтың жер, сот, оқу мәселесіндегі талаптарын патшаға жеткізді.","Мемлекеттік Думаға қазақ өкілдері сайланды, бірақ 1907 жылғы заң өкілдікті шектеді.","«Қазақ» газеті мен «Айқап» журналы ұлттық сананы оятты.","1916 жылғы жарлық халықтың наразылығын тудырып, ұлт-азаттық көтеріліске ұласты.","1917 жылғы Ақпан төңкерісі қазақ қозғалысына жаңа мүмкіндік ашты.","Алаш партиясы мен Алашорда автономиясы – қазақтың ұлттық мемлекет құру жолындағы алғашқы ірі әрекеті.","Алаш қайраткерлері кейін қуғынға ұшырады, бірақ олардың мұрасы ұлттық идеяның негізі болды."];
+const F=[[1891,"Дала ережесі қазақ жерін мемлекет меншігі деп жариялады","э"],[1904,"Ресей–жапон соғысы басталды, халыққа салық салмағы артты","с"],[1905,"Бірінші орыс революциясы басталды","с"],[1905,"Қарқаралы петициясы қабылданды","с"],[1905,"Қоянды жәрмеңкесінде де петиция жиналды","с"],[1906,"Орынбор–Ташкент теміржолы іске қосылды","э"],[1906,"І Мемлекеттік Дума ашылды","с"],[1906,"Ә. Бөкейхан Семей облысынан Думаға сайланды","с"],[1906,"Бөкейхан Выборг үндеуіне қол қойды","с"],[1906,"Столыпиннің аграрлық реформасы басталды","э"],[1907,"ІІ Мемлекеттік Дума жұмысын бастады","с"],[1907,"3 маусымдағы заң қазақ өлкелерінің Думадағы өкілдігін шектеді","с"],[1909,"«Оян, қазақ!» жинағы Қазанда басылды","м"],[1909,"Байтұрсынұлының «Қырық мысал» кітабы Петербургте шықты","м"],[1911,"«Айқап» журналы Троицкіде шыға бастады","м"],[1911,"Байтұрсынұлының «Маса» жинағы Орынборда жарық көрді","м"],[1913,"«Қазақ» газетінің алғашқы нөмірі шықты","м"],[1914,"Бірінші дүниежүзілік соғыс басталды","с"],[1916,"25 маусымда тыл жұмысына алу туралы жарлық шықты","с"],[1916,"Торғайда Иманов пен Жанбосынов бастаған көтеріліс болды","с"],[1916,"Жетісудағы көтеріліс қырғынға ұласты, халық Қытайға ауды","с"],[1917,"Ақпан төңкерісі патша билігін құлатты","с"],[1917,"Шілдеде Орынборда І жалпықазақ съезі өтті","с"],[1917,"Алаш партиясы құрылды","с"],[1917,"Желтоқсанда ІІ съезд Алаш автономиясын жариялады","с"],[1917,"Алашорда үкіметін Ә. Бөкейхан басқарды","с"],[1917,"Алашорданың орталығы Семей болды","с"],[1918,"«Қазақ» газеті жабылды","м"],[1920,"Қырғыз (Қазақ) АКСР-і құрылды","с"],[1937,"Бөкейхан мен Байтұрсынұлы ату жазасына кесілді","с"]];
+const TL=[3,6,9,11,16,18,19,22,24,26,28,29];
+const P=[["Әлихан Бөкейхан","1866–1937","Алаш партиясы мен Алашорданың жетекшісі, І Дума депутаты."],["Ахмет Байтұрсынұлы","1872–1937","«Қазақ» газетінің редакторы, ақын, ағартушы."],["Міржақып Дулатұлы","1885–1935","«Оян, қазақ!» авторы, Алаш қайраткері."],["Мұстафа Шоқай","1890–1941","Түркістан қайраткері, эмиграциядағы саясаткер."],["Халел Досмұхамедұлы","1883–1939","Дәрігер, ғалым, Алашорда мүшесі."],["Жүсіпбек Аймауытов","1889–1931","Жазушы, педагог, Алаш қайраткері."],["Мағжан Жұмабаев","1893–1938","Ақын, Алаш зиялысы."],["Мұхамеджан Сералин","1872–1929","«Айқап» журналының негізін қалаушы, редакторы."],["Амангелді Иманов","1873–1919","1916 жылғы Торғай көтерілісінің жетекшісі."],["Әлімхан Ермеков","1891–1970","Алашорда мүшесі, ғалым-педагог."]];
+const D=[["Петиция","Халықтың талабы жазылған ұжымдық өтініш."],["Мемлекеттік Дума","Ресей империясындағы сайланбалы өкілді орган."],["Алаш","Қазақ ұлттық-демократиялық партиясы (1917)."],["Алашорда","Алаш автономиясының ұлттық үкіметі."],["Инородец","Патша заңындағы орыс емес халықтарға берілген атау."],["Қоныс аударушы","Ресейден қазақ жеріне қоныстануға келген шаруа."],["Съезд","Өкілдердің жиналып шешім қабылдайтын жиыны."],["Автономия","Мемлекет құрамындағы өзін-өзі басқару құқығы."],["Зиялылар","Білімді, қоғамдық ой жетекшілері."],["Столыпин реформасы","Шаруаларға жер бөліп, қоныс аударуды күшейткен реформа."]];
+const PN={or:[133,77,"Орынбор","1913 ж. «Қазақ» газеті шықты; 1917 ж. екі жалпықазақ съезі өтті."],tg:[252,109,"Торғай","1916 ж. Амангелді Иманов бастаған көтеріліс орталығы."],kk:[418,112,"Қарқаралы","1905 ж. Қарқаралы петициясы осында жазылды."],sm:[485,97,"Семей","Алашорда орталығы; Бөкейхан Семей облысынан Думаға сайланды."],vr:[439,202,"Верный (Алматы)","Жетісу өңірі, 1916 жылғы көтеріліс аймағы."]};
+const VD=["Алаш қозғалысы және Алашорда","1916 жылғы ұлт-азаттық көтеріліс","Әлихан Бөкейхан және Алаш зиялылары"];
+const Q1=[["Қарқаралы петициясының мәні қандай?",["Халық талаптарын патшаға жеткізу","Соғысқа шақыру","Салық көтеру"],0],["«Қазақ» газеті қай жылы шыға бастады?",["1905","1913","1917"],1],["Алашорданы кім басқарды?",["Ә. Бөкейхан","М. Шоқай","А. Иманов"],0]];
+const Q2=[["25 маусымдағы жарлық 1916 жылы шықты",1],["Алаш автономиясы 1905 жылы жарияланды",0],["«Айқап» журналы Троицкіде шықты",1],["І Дума 1917 жылы ашылды",0]];
+const P3=[["М. Дулатұлы","«Оян, қазақ!»"],["А. Байтұрсынұлы","«Қырық мысал»"],["А. Иманов","Торғай көтерілісі"],["М. Шоқай","Қоқан автономиясы"]];
+const Q4=[["І жалпықазақ съезі қай қалада өтті?","or"],["Алашорданың орталығы қай қала?","sm"],["Қарқаралы петициясы қай жерде жазылды?","kk"]];
+const EV=["Қарқаралы петициясы (1905)","«Қазақ» газеті (1913)","25 маусымдағы жарлық (1916)","Алаш автономиясы (1917)"],OR=[2,0,3,1];
+const TN=["1-тапсырма · Тест","2-тапсырма · Дұрыс / Бұрыс","3-тапсырма · Сәйкестендіру","4-тапсырма · Картадан тап","5-тапсырма · Оқиғаларды ретке қой"],MX=[3,4,4,3,4];
+let map=a=>`<svg viewBox="0 0 600 290" class="map" role="img" aria-label="Қазақ даласының схемалық картасы"><path class="land" d="M20 110L80 70L180 60L300 50L420 60L500 80L585 120L560 160L500 185L470 225L420 235L330 215L250 255L170 235L110 185L60 150Z"/><text class="lbl" x="300" y="150">ҚАЗАҚ ДАЛАСЫ</text>`+Object.entries(PN).map(([k,p])=>`<g class="pin" data-a="${a}" data-v="${k}"><circle class="pulse" cx="${p[0]}" cy="${p[1]}" r="8"/><circle cx="${p[0]}" cy="${p[1]}" r="7"/><text class="pt" x="${p[0]}" y="${p[1]-13}">${a=="gp"?"":p[2]}</text></g>`).join("")+`</svg>`;
+const IM=[["«Қазақ» газеті, 1913",`<svg class="im" viewBox="0 0 160 110"><rect x="25" y="8" width="110" height="94" rx="4"/><text x="80" y="32" font-weight="700">ҚАЗАҚ</text><path d="M37 44h86M37 56h86M37 68h54M37 80h86M37 92h70"/></svg>`],["Петиция, 1905",`<svg class="im" viewBox="0 0 160 110"><rect x="25" y="14" width="110" height="82" rx="10"/><path d="M40 34h80M40 46h80M40 58h50"/><circle class="s" cx="112" cy="78" r="10"/><text x="60" y="84">1905</text></svg>`],["Теміржол, 1906",`<svg class="im" viewBox="0 0 160 110"><path d="M10 84h140M20 90v-12M50 90v-12M80 90v-12M110 90v-12M140 90v-12M10 58C60 40 100 40 150 58"/><rect x="48" y="52" width="64" height="24" rx="4"/><circle class="s" cx="62" cy="78" r="5"/><circle class="s" cx="98" cy="78" r="5"/><text x="80" y="24">Орынбор–Ташкент</text></svg>`]];
+const V={
+home:()=>`<section class="hero"><h1>Қазақстан XX ғасыр басында</h1><p>Саяси-экономикалық және әлеуметтік жағдай: Алаш қозғалысы, петициялар, І және ІІ Мемлекеттік Дума, қазақ зиялылары.</p><div class="st"><span>10 тезис</span><span>30 факт</span><span>10 тұлға</span><span>3 видео</span><span>5 тапсырма</span></div><button class="btn" data-a="go" data-v="learn">Оқуды бастау</button><button class="btn alt" data-a="go" data-v="game">Ойынға өту</button></section><div class="grid"><div class="card"><h3>🗺 Карта</h3><p class="m">Қалаларды басып, оқиғаларды біл.</p></div><div class="card"><h3>⏳ Хронология</h3><p class="m">1905–1937 жылдар жолы.</p></div><div class="card"><h3>🎮 Ойын</h3><p class="m">5 түрлі тапсырма және нәтиже.</p></div></div><div class="card"><b>Орындалған тапсырма: ${Object.keys(R).length} / 5</b><div class="bar"><i style="width:${Object.keys(R).length*20}%"></i></div></div>`,
+map:()=>`<h2>Карта</h2><p class="m">Нүктені басыңыз (схемалық карта).</p>${map("pin")}<div class="card">${pin?`<h3>${PN[pin][2]}</h3><p>${PN[pin][3]}</p>`:`<p class="m">Қаланы таңдаңыз.</p>`}</div>`,
+time:()=>`<h2>Хронология</h2><div class="tl">${TL.map(i=>`<div class="ti"><b>${F[i][0]}</b><p>${F[i][1]}</p></div>`).join("")}</div>`,
+learn:()=>`<h2>Оқу</h2><h3>3 видео</h3><div class="grid">${VD.map(q=>`<a class="vid" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent(q)}"><i>▶</i><b>${q}</b><br><small class="m">YouTube-те жаңа терезеде ашылады</small></a>`).join("")}</div><h3>10 негізгі тезис</h3>${TH.map((t,i)=>`<div class="th"><b>${i+1}</b><span>${t}</span></div>`).join("")}`,
+pers:()=>`<h2>Тарихи тұлғалар</h2>${P.map(p=>`<div class="pc"><div class="av">${p[0][0]}</div><div><b>${p[0]}</b><small>${p[1]}</small><p>${p[2]}</p></div></div>`).join("")}`,
+ev:()=>{const L=F.filter(f=>!flt||f[2]==flt);return`<h2>30 тарихи факт</h2><div class="tabs">${[["","Барлығы"],["с","Саяси"],["э","Экономика"],["м","Мәдени"]].map(c=>`<button class="chip ${flt==c[0]?"on":""}" data-a="f" data-v="${c[0]}">${c[1]}</button>`).join("")}</div><p class="m">${L.length} / 30</p>${L.map(f=>`<div class="ev"><b>${f[0]}</b><span>${f[1]}</span></div>`).join("")}`},
+data:()=>{const y={};F.forEach(f=>y[f[0]]=(y[f[0]]||0)+1);const k=Object.keys(y);return`<h2>Деректер</h2><h3>Тарихи суреттер</h3><div class="grid">${IM.map(i=>`<div class="card">${i[1]}<small class="m">${i[0]} · схемалық</small></div>`).join("")}</div><h3>Жылдар бойынша фактілер саны</h3><div class="card"><div class="bars">${k.map(a=>`<div>${y[a]}<i style="height:${y[a]*15}%"></i><small>${String(a).slice(2)}</small></div>`).join("")}</div></div>`},
+game:()=>`<h2>Ойын</h2><div class="tabs">${TN.map((n,i)=>`<button class="chip ${G==i?"on":""}" data-a="g" data-v="${i}">${i+1}${R[i]!=null?" ✓":""}</button>`).join("")}</div><div class="card"><h3>${TN[G]}</h3>${R[G]!=null?done(G):[t1,t2,t3,t4,t5][G]()}</div>`,
+terms:()=>`<h2>Терминдер</h2>${D.map(d=>`<details><summary>${d[0]}</summary><p>${d[1]}</p></details>`).join("")}`,
+res:()=>{const n=Object.keys(R).length,t=Object.values(R).reduce((a,b)=>a+b,0),pc=Math.round(t/18*100);return`<h2>Нәтиже</h2><div class="card">${TN.map((x,i)=>`<p>${x}: <b>${R[i]!=null?R[i]+" / "+MX[i]:"—"}</b></p><div class="bar"><i style="width:${R[i]!=null?R[i]/MX[i]*100:0}%"></i></div>`).join("")}</div><div class="card">${n<5?`<p>Қорытынды нәтиже үшін 5 тапсырманы аяқтаңыз (${n}/5).</p>`:`<h3>Қорытынды нәтиже</h3><p class="big">${t} / 18 · ${pc}%</p><p class="fb">${pc>=85?"Алаш зерттеушісі 🏆":pc>=60?"Тарих білгірі 👏":"Бастаушы — қайта оқып көр 📚"}</p>`}<button class="btn" data-a="rs">Қайта бастау</button></div>`}};
+const radios=(k,o)=>o.map((x,j)=>`<label class="op"><input type="radio" name="q${k}" value="${j}"> ${x}</label>`).join("");
+const t1=()=>Q1.map((q,k)=>`<p><b>${k+1}. ${q[0]}</b></p>${radios(k,q[1])}`).join("")+`<button class="btn" data-a="c1">Тексеру</button>`;
+const t2=()=>Q2.map((q,k)=>`<p><b>${k+1}. ${q[0]}</b></p>${radios(k,["Бұрыс","Дұрыс"])}`).join("")+`<button class="btn" data-a="c2">Тексеру</button>`;
+const t3=()=>P3.map((p,k)=>`<b>${p[0]}</b><select class="sel" data-k="${k}"><option value="">—</option>${[...P3].reverse().map(x=>`<option value="${x[1]}">${x[1]}</option>`).join("")}</select>`).join("")+`<button class="btn" data-a="c3">Тексеру</button>`;
+const t4=()=>`<p><b>${m4+1}/3. ${Q4[m4][0]}</b></p>${map("gp")}${msg?`<p class="fb">${msg}</p>`:""}`;
+const t5=()=>`<p class="m">Оқиғаларды ескіден жаңаға қарай бірінен соң бірін басыңыз.</p>${OR.map(v=>`<button class="eb" data-a="o" data-v="${v}">${o5.includes(v)?o5.indexOf(v)+1+". ":""}${EV[v]}</button>`).join("")}<button class="btn" data-a="r5">Қайта таңдау</button>`;
+function done(i){const r=R[i],last=i==4;return`<p class="big">Негізгі нәтиже: ${r} / ${MX[i]}</p><div class="bar"><i style="width:${r/MX[i]*100}%"></i></div><p>${r==MX[i]?"Тамаша! 🎉":r>=MX[i]/2?"Жақсы, жалғастыр.":"Материалды қайта оқып шық."}</p>${i==3&&msg?`<p class="fb">${msg}</p>`:""}<button class="btn" data-a="${last?"go":"g"}" data-v="${last?"res":i+1}">${last?"Қорытынды нәтиже →":"Келесі тапсырма →"}</button>`}
+function fin(i,s){R[i]=s;sv();render()}
+function render(){$("#m").innerHTML=V[cur]();E("#nav button").forEach(b=>b.classList.toggle("on",b.dataset.v==cur))}
+function go(v){cur=v;location.hash=v;render();scrollTo(0,0)}
+$("#nav").innerHTML=S.map(s=>`<button data-a="go" data-v="${s[0]}">${s[1]}</button>`).join("");
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a,v=b.dataset.v,ck=(k,q)=>{const x=$(`input[name=q${k}]:checked`);return x&&+x.value==q};
+if(a=="go")go(v);else if(a=="pin"){pin=v;render()}else if(a=="f"){flt=v;render()}else if(a=="g"){G=+v;render()}
+else if(a=="c1")fin(0,Q1.filter((q,k)=>ck(k,q[2])).length);
+else if(a=="c2")fin(1,Q2.filter((q,k)=>ck(k,q[1])).length);
+else if(a=="c3")fin(2,E("select.sel").filter(s=>s.value==P3[+s.dataset.k][1]).length);
+else if(a=="gp"){const ok=v==Q4[m4][1];if(ok)s4++;msg=ok?"✓ Дұрыс!":"✗ Қате. Дұрыс жауап: "+PN[Q4[m4][1]][2];m4++;m4==3?fin(3,s4):render()}
+else if(a=="o"){if(!o5.includes(+v))o5.push(+v);if(o5.length==4)fin(4,o5.filter((x,k)=>x==k).length);else render()}
+else if(a=="r5"){o5=[];render()}
+else if(a=="rs"){R={};sv();G=0;m4=s4=0;o5=[];msg="";go("game")}
+else if(a=="th"){const d=document.documentElement;d.dataset.theme=(d.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))=="dark"?"light":"dark"}});
+addEventListener("hashchange",()=>{const h=location.hash.slice(1);if(V[h]&&h!=cur){cur=h;render()}});
+
+const K="#3b2a1a",pp=b=>`<svg class="ps" viewBox="0 0 160 110"><defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecdcae"/><stop offset="1" stop-color="#c8a265"/></linearGradient></defs><rect width="160" height="110" fill="url(#sk)"/>${b}<rect width="160" height="110" filter="url(#gr)" opacity=".5"/></svg>`;
+document.body.insertAdjacentHTML("beforeend",`<svg width="0" height="0" style="position:absolute"><filter id="gr"><feTurbulence baseFrequency=".85" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .25 0 0 0 0 .17 0 0 0 0 .1 0 0 0 1.2 -.35"/></filter></svg><div id="md" class="md"><div class="mb"><button class="x" data-a="x" aria-label="Жабу">✕</button><div id="mc"></div></div></div><div class="sp" id="sp"></div>`);
+const SC=[["Ауыл, XX ғасыр басы","Қазақ даласындағы жазғы ауыл: киіз үйлер мен көшпелі тұрмыс.",`<circle cx="112" cy="52" r="15" fill="#f6e6b4"/><path d="M0 84Q40 70 80 80T160 76V110H0z" fill="#8a6a3d"/>${[26,64,100].map((x,i)=>`<path d="M${x} 90a${14-i*2} ${14-i*2} 0 0 1 ${28-i*4} 0z" fill="${K}"/><rect x="${x}" y="90" width="${28-i*4}" height="8" fill="#5a4326"/>`).join("")}<path class="sm" d="M40 74q4-8 0-14" stroke="${K}" fill="none"/>`],
+["«Қазақ» газеті, 1913","Алғашқы қазақ ұлттық газеті Орынборда шықты.",`<rect x="26" y="8" width="108" height="96" fill="#f3e7c6" stroke="${K}"/><text x="80" y="30" text-anchor="middle" font-size="16" font-weight="700" font-family="Noto Serif,serif" fill="${K}">ҚАЗАҚ</text><path d="M34 36h92" stroke="${K}" stroke-width="2"/><path d="M34 46h40M34 54h40M34 62h40M34 70h40M34 78h40M82 46h44M82 54h44M82 62h44M82 70h44" stroke="${K}" opacity=".6"/><rect x="82" y="76" width="44" height="20" fill="${K}" opacity=".25"/>`],
+["Қарқаралы петициясы, 1905","Халық талабы жазылған ұжымдық өтініш.",`<rect x="30" y="14" width="100" height="78" rx="6" fill="#f3e7c6" stroke="${K}"/><path d="M42 32h76M42 44h76M42 56h76M42 68h40" stroke="${K}" opacity=".6"/><circle cx="108" cy="78" r="11" fill="#9b2f22"/><path d="M26 14q-8 39 0 78M134 14q8 39 0 78" stroke="${K}" fill="none" stroke-width="3"/>`],
+["Орынбор–Ташкент теміржолы, 1906","Жол Ресей мен Түркістанды жалғап, қоныс аударуды күшейтті.",`<path d="M0 88h160M0 96h160" stroke="${K}" stroke-width="2"/>${[10,40,70,100,130].map(x=>`<path d="M${x} 20v70M${x-6} 28h12" stroke="${K}" stroke-width="2"/>`).join("")}<rect x="40" y="58" width="50" height="26" fill="${K}"/><rect x="90" y="46" width="14" height="38" fill="${K}"/><circle cx="52" cy="86" r="6" fill="#5a4326"/><circle cx="78" cy="86" r="6" fill="#5a4326"/><circle class="sm" cx="100" cy="32" r="8" fill="#f3e7c6"/>`],
+["1916 жылғы көтеріліс","Халық тыл жұмысына алу жарлығына қарсы шықты.",`<circle cx="118" cy="40" r="16" fill="#f6e6b4"/><path d="M0 90h160V110H0z" fill="#6f5230"/>${[10,48,84].map(x=>`<g transform="translate(${x} 0)"><ellipse cx="14" cy="76" rx="14" ry="7" fill="${K}"/><path d="M26 74l6-14 4 2-6 14zM6 80l-3 14M12 83v12M20 83v12M26 80l3 14" stroke="${K}" stroke-width="2" fill="none"/><circle cx="14" cy="58" r="4" fill="${K}"/><path d="M14 62v12" stroke="${K}" stroke-width="4"/></g>`).join("")}<path d="M120 18v50" stroke="${K}" stroke-width="2"/><path d="M120 18l22 6-22 8z" fill="#9b2f22"/>`],
+["Мемлекеттік Дума, 1906","Қазақ өкілдері Петербургтегі Думада халық мұңын айтты.",`<path d="M20 44L80 14l60 30z" fill="${K}"/>${[32,52,72,92,112].map(x=>`<rect x="${x}" y="48" width="8" height="40" fill="#f3e7c6" stroke="${K}"/>`).join("")}<rect x="20" y="88" width="120" height="6" fill="${K}"/><rect x="14" y="94" width="132" height="6" fill="#5a4326"/>${[40,60,80,100,120].map(x=>`<circle cx="${x}" cy="105" r="2.5" fill="${K}"/>`).join("")}`]];
+const VS=[[1,5,2,0],[3,4,0,4],[5,2,1,0]],CP=[[TH[5],TH[7],TH[8],TH[9]],[TH[1],F[18][1],F[19][1],TH[6]],[P[0][2],TH[4],TH[3],F[29][1]]];
+const HS=`<svg viewBox="0 0 600 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="hg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16324d"/><stop offset=".55" stop-color="#c9704a"/><stop offset="1" stop-color="#f0b45a"/></linearGradient></defs><rect width="600" height="300" fill="url(#hg)"/><circle class="sun" cx="380" cy="190" r="42" fill="#ffd98a"/><g class="cl" fill="#fff" opacity=".25"><ellipse cx="120" cy="60" rx="50" ry="9"/><ellipse cx="460" cy="40" rx="60" ry="8"/></g><path d="M0 210Q150 170 300 205T600 190V300H0z" fill="#3a3a52"/><path d="M0 250Q200 215 400 245T600 230V300H0z" fill="#1a2433"/><g transform="translate(70 200)"><path d="M0 30a26 26 0 0 1 52 0z" fill="#0d1520"/><rect y="30" width="52" height="14" fill="#0d1520"/><path class="sm" d="M26 4q6-10 0-20" stroke="#fff" fill="none" opacity=".4"/></g><g class="rd"><ellipse cx="0" cy="248" rx="20" ry="9" fill="#0a111a"/><path d="M16 244l10-18 5 2-8 18zM-14 250l-4 16M-6 253v14M8 253v14M14 250l4 16" stroke="#0a111a" stroke-width="3" fill="none"/><circle cx="0" cy="226" r="5" fill="#0a111a"/><path d="M0 231v14" stroke="#0a111a" stroke-width="6"/></g>${[70,95,55].map((y,i)=>`<path class="bd" style="animation-delay:${-i*5}s" d="M0 ${y}q6-7 12 0q6-7 12 0" stroke="#fff" fill="none" stroke-width="1.5"/>`).join("")}</svg>`;
+const ACC=[
+`<path d="M30 45q10 17 20 0q-10 5-20 0z" fill="#4a4a4a"/><circle cx="34" cy="35" r="4.2" fill="none" stroke="#2b2118"/><circle cx="46" cy="35" r="4.2" fill="none" stroke="#2b2118"/><path d="M38 35h4" stroke="#2b2118"/>`,
+`<path d="M31 44q9-5 18 0q-9 3-18 0z" fill="#2b2118"/>`,
+`<path d="M26 27q14-14 28 0z" fill="#1f3b5c"/><path d="M33 44q7-3 14 0q-7 2-14 0z" fill="#2b2118"/>`,
+`<path d="M32 44q8-4 16 0q-8 3-16 0z" fill="#2b2118"/><path d="M37 58h6v18h-6z" fill="#7a1f2b"/>`,
+`<circle cx="34" cy="36" r="4.5" fill="none" stroke="#2b2118" stroke-width="1.3"/><circle cx="46" cy="36" r="4.5" fill="none" stroke="#2b2118" stroke-width="1.3"/><path d="M32 44q8-4 16 0q-8 3-16 0z" fill="#2b2118"/>`,
+`<circle cx="34" cy="36" r="4.5" fill="none" stroke="#2b2118" stroke-width="1.3"/><circle cx="46" cy="36" r="4.5" fill="none" stroke="#2b2118" stroke-width="1.3"/>`,
+``,
+`<path d="M26 27q14-13 28 0z" fill="#e8e0cc"/><path d="M28 40q12 24 24 0q-12 6-24 0z" fill="#8a8a8a"/>`,
+`<ellipse cx="40" cy="24" rx="18" ry="11" fill="#5a4636"/><path d="M32 44q8-4 16 0q-8 3-16 0z" fill="#2b2118"/>`,
+`<rect x="29" y="33" width="9" height="6" rx="2" fill="none" stroke="#2b2118"/><rect x="42" y="33" width="9" height="6" rx="2" fill="none" stroke="#2b2118"/><path d="M38 35h4" stroke="#2b2118"/>`];
+const PH=["https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Alikhan_Bukeikhanov_in_1906.jpg/330px-Alikhan_Bukeikhanov_in_1906.jpg","img/baitursynuly.jpg","img/dulatuly.jpg","img/shokay.jpg","img/dosmukhamedov.jpg","img/aimautov.jpg","img/zhumabayev.jpg","img/seralin.jpg","img/imanov.jpg","img/ermekov.jpg"];
+const pt=i=>`<svg viewBox="0 0 80 80"><defs><linearGradient id="g${i}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(${i*34+20},45%,62%)"/><stop offset="1" stop-color="hsl(${i*34+20},50%,26%)"/></linearGradient></defs><rect width="80" height="80" fill="url(#g${i})"/><path d="M10 80c2-20 14-26 30-26s28 6 30 26z" fill="#2b2118"/><path d="M33 56l7 11 7-11z" fill="#f2e8d0"/><circle cx="40" cy="36" r="14" fill="#d9b48c"/><path d="M26 34c0-15 28-15 28 0c-5-7-23-7-28 0z" fill="#2b2118"/>${i%2?`<path d="M34 43q6 3 12 0" stroke="#2b2118" stroke-width="2" fill="none"/>`:`<circle cx="26" cy="36" r="0"/><path d="M31 33h6M43 33h6" stroke="#2b2118" stroke-width="1.5"/>`}${ACC[i]||""}<rect width="80" height="80" filter="url(#gr)" opacity=".5"/></svg>`;
+const face=i=>PH[i]?`<img src="${PH[i]}" alt="${P[i][0]}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.innerHTML=pt(${i})">`:pt(i);
+map=a=>`<svg viewBox="0 0 600 290" class="map" role="img" aria-label="Қазақ даласының схемалық картасы"><path class="sea" d="M62 178q26-10 40 6q8 26-10 46q-26-6-30-52z"/><path class="land" d="M20 110L80 70L180 60L300 50L420 60L500 80L585 120L560 160L500 185L470 225L420 235L330 215L250 255L170 235L110 185L60 150Z"/><text class="lb2" x="300" y="34">РЕСЕЙ ИМПЕРИЯСЫ</text><text class="lb2" x="556" y="222">ҚЫТАЙ</text><text class="lb2" x="330" y="248">Ташкент</text><ellipse class="sea" cx="228" cy="182" rx="11" ry="17"/><path class="sea" d="M360 178q30-14 70-6q-30 10-70 6z"/><path class="riv" d="M238 190Q300 190 322 214M133 77Q100 120 80 150"/><circle class="upz" cx="252" cy="109" r="36"/><circle class="upz" cx="439" cy="202" r="36"/><path class="rail" d="M133 77C170 120 205 150 238 190S300 205 322 214"/><text class="lbl" x="300" y="150">ҚАЗАҚ ДАЛАСЫ</text>`+Object.entries(PN).map(([k,p])=>`<g class="pin" data-a="${a}" data-v="${k}"><circle class="pulse" cx="${p[0]}" cy="${p[1]}" r="8"/><circle cx="${p[0]}" cy="${p[1]}" r="7"/><text class="pt" x="${p[0]}" y="${p[1]-13}">${a=="gp"?"":p[2]}</text></g>`).join("")+`</svg>`;
+V.home=()=>{const n=Object.keys(R).length;return`<section class="hero">${HS}<div class="tx"><small class="kick">1891–1937 · АЛАШ ҚОЗҒАЛЫСЫ</small><h1>Қазақстан XX ғасыр басында</h1><p>Дала мен петиция, газет пен Дума, 1916 жылғы дауыл және Алаш үкіметі: саяси-экономикалық жағдай қозғалыста.</p><div class="st">${[[10,"тезис"],[30,"факт"],[10,"тұлға"],[3,"видео"],[5,"тапсырма"]].map(x=>`<span><b class="cn" data-n="${x[0]}">0</b> ${x[1]}</span>`).join("")}</div><button class="btn" data-a="go" data-v="learn">Оқуды бастау</button><button class="btn alt" data-a="go" data-v="game">Ойынға өту</button></div></section><div class="grid">${[["map","🗺","Карта","Қаланы бас, көтеріліс аймағы мен теміржолды көр."],["time","⏳","Хронология","Жылдар жолын өзің ойнат."],["pers","👤","Тұлғалар","10 қайраткердің портреті."],["game","🎮","Ойын","5 тапсырма және нәтиже."]].map(c=>`<div class="card hv" data-a="go" data-v="${c[0]}"><div class="ic">${c[1]}</div><h3>${c[2]}</h3><p class="m">${c[3]}</p></div>`).join("")}</div><div class="card"><b>Орындалған тапсырма: ${n} / 5</b><div class="bar"><i style="width:${n*20}%"></i></div></div>`};
+V.map=()=>`<h2>Карта</h2><div class="tabs">${[["rail","Теміржол"],["up","1916 көтеріліс"],["geo","Өзен-көл"]].map(l=>`<button class="chip on" data-a="ly" data-v="${l[0]}">${l[1]}</button>`).join("")}</div><div class="mw">${map("pin")}</div><div class="card pop">${pin?`<h3>${PN[pin][2]}</h3><p>${PN[pin][3]}</p>`:`<p class="m">Қала нүктесін басыңыз. Қызыл дақ – 1916 жылғы көтеріліс аймақтары (схемалық карта).</p>`}</div>`;
+let ty=1891,tti;
+V.time=()=>`<h2>Хронология</h2><div class="card"><div class="yr" id="yr">${ty}</div><input id="rg" type="range" min="1891" max="1937" value="${ty}" aria-label="Жыл"><button class="btn" data-a="tpl">▶ Тарихты ойнату</button></div><div class="tl">${TL.map(i=>`<div class="ti ${F[i][0]<=ty?"on":""}" data-y="${F[i][0]}"><b>${F[i][0]}</b><p>${F[i][1]}</p></div>`).join("")}</div>`;
+const ut=()=>{if(!$("#yr")){clearInterval(tti);return}$("#yr").textContent=ty;E(".ti").forEach(t=>t.classList.toggle("on",+t.dataset.y<=ty))};
+addEventListener("input",e=>{if(e.target.id=="rg"){ty=+e.target.value;ut()}});
+V.learn=()=>`<h2>Оқу</h2><h3>3 видео</h3><div class="grid">${VD.map((q,i)=>`<div class="vid hv" data-a="vo" data-v="${i}"><div class="vt">${pp(SC[VS[i][0]][2])}<span class="play">▶</span></div><b>${q}</b><br><small class="m">Басыңыз: видео-баян сайттың ішінде ашылады</small></div>`).join("")}</div><h3>10 негізгі тезис</h3><p class="m">Оқылды: <b id="rc">0</b>/10 — тезисті басып белгіле</p>${TH.map((t,i)=>`<div class="th hv" data-a="rd"><b>${i+1}</b><span>${t}</span></div>`).join("")}`;
+V.pers=()=>`<h2>Тарихи тұлғалар</h2><p class="m">Өмір жолы 1860–1970 жылдар шкаласында көрсетілген.</p><div class="grid">${P.map((p,i)=>{const [b,d]=p[1].split("–").map(Number),A=1860,Z=1970,sp=Z-A;return`<div class="card pc2 hv"><div class="ph2"><div class="pf">${face(i)}</div><div><b>${p[0]}</b><small>${p[1]}</small></div></div><p>${p[2]}</p><div class="lf"><i style="left:${(b-A)/sp*100}%;width:${(d-b)/sp*100}%"></i></div><small class="m">${A} ─── ${Z}</small></div>`}).join("")}</div>`;
+V.data=()=>{const y={},c={"с":0,"э":0,"м":0};F.forEach(f=>{y[f[0]]=(y[f[0]]||0)+1;c[f[2]]++});const k=Object.keys(y),C=[["с","Саяси","#0a7285"],["э","Экономика","#c28a1c"],["м","Мәдени","#c0392b"]];let o=0;const dn=C.map(x=>{const l=c[x[0]]/30*251.3,e=`<circle class="dn" cx="60" cy="60" r="40" fill="none" stroke="${x[2]}" stroke-width="20" stroke-dasharray="${l} 251.3" stroke-dashoffset="${-o}" transform="rotate(-90 60 60)"/>`;o+=l;return e}).join("");return`<h2>Деректер</h2><h3>Тарихи суреттер мен құжаттар</h3><div class="grid">${SC.map((s,i)=>`<figure class="ph hv" data-a="zi" data-v="${i}">${pp(s[2])}<figcaption>${s[0]}</figcaption></figure>`).join("")}</div><h3>Жылдар бойынша фактілер</h3><div class="card"><div class="bars">${k.map(a=>`<div>${y[a]}<i style="height:${y[a]*18}%"></i><small>${String(a).slice(2)}</small></div>`).join("")}</div></div><h3>Фактілер санаттары</h3><div class="card dn2"><svg viewBox="0 0 120 120" width="150">${dn}</svg><div>${C.map(x=>`<p><b style="color:${x[2]}">●</b> ${x[1]}: ${c[x[0]]}</p>`).join("")}</div></div>`};
+const r0=V.res;V.res=()=>{const t=Object.values(R).reduce((a,b)=>a+b,0),n=Object.keys(R).length,p=t/18;return`<h2>Нәтиже</h2><div class="card ring"><svg viewBox="0 0 120 120" width="130"><circle cx="60" cy="60" r="48" fill="none" stroke="var(--b)" stroke-width="10"/><circle class="dn" cx="60" cy="60" r="48" fill="none" stroke="var(--g)" stroke-width="10" stroke-linecap="round" stroke-dasharray="${p*301.6} 301.6" transform="rotate(-90 60 60)"/><text x="60" y="68" text-anchor="middle" font-size="24" font-weight="700" fill="var(--t)">${Math.round(p*100)}%</text></svg><div><b>Жалпы балл: ${t} / 18</b><br><span class="m">Тапсырма: ${n} / 5</span></div></div>`+r0().replace("<h2>Нәтиже</h2>","")};
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");const t=e.target;setTimeout(()=>t.style.transitionDelay="0s",900);io.unobserve(t)}}),{threshold:.06});
+const rr=render;render=function(){rr();E(".card,.ev,.th,.ti,.vid,figure,details,.eb").forEach((e,i)=>{e.classList.add("rv");e.style.transitionDelay=Math.min(i,8)*.05+"s";io.observe(e)});E(".cn").forEach(c=>{const n=+c.dataset.n;let k=0;const t=setInterval(()=>{c.textContent=++k;if(k>=n)clearInterval(t)},70)})};
+function burst(){const c=document.createElement("canvas");c.className="cf";c.width=innerWidth;c.height=innerHeight;document.body.append(c);const x=c.getContext("2d"),p=Array.from({length:70},()=>({x:innerWidth/2,y:innerHeight/2,vx:(Math.random()-.5)*14,vy:-Math.random()*13-3,c:`hsl(${Math.random()*360},80%,60%)`,s:4+Math.random()*5}));let f=0;(function a(){x.clearRect(0,0,c.width,c.height);p.forEach(q=>{q.x+=q.vx;q.y+=q.vy;q.vy+=.4;x.fillStyle=q.c;x.fillRect(q.x,q.y,q.s,q.s)});if(++f<90)requestAnimationFrame(a);else c.remove()})()}
+const f0=fin;fin=function(i,s){f0(i,s);if(s>=MX[i]/2)burst()};
+let vi=0,vs=0,vpl=1,vtm;
+const op=()=>$("#md").classList.add("on"),cl=()=>{$("#md").classList.remove("on");clearInterval(vtm)};
+const vd=()=>{$("#mc").innerHTML=`<div class="stage"><div class="kb">${pp(SC[VS[vi][vs]][2])}</div></div><p class="cap"><small class="m">${VD[vi]} · ${vs+1}/4</small><br>${CP[vi][vs]}</p><div class="dots">${[0,1,2,3].map(i=>`<i class="${i<=vs?"on":""}"></i>`).join("")}</div><div class="ctl"><button class="chip" data-a="vm" data-v="-1">◀</button><button class="chip" data-a="vm" data-v="0">${vpl?"⏸":"▶"}</button><button class="chip" data-a="vm" data-v="1">▶▶</button><a class="chip" target="_blank" rel="noopener" href="https://www.youtube.com/results?search_query=${encodeURIComponent(VD[vi])}">YouTube ↗</a></div>`};
+const vt=()=>{clearInterval(vtm);if(vpl)vtm=setInterval(()=>{vs=(vs+1)%4;vd()},5500)};
+$("#md").addEventListener("click",e=>{if(e.target.id=="md")cl()});
+addEventListener("scroll",()=>{$("#sp").style.width=scrollY/Math.max(1,document.body.scrollHeight-innerHeight)*100+"%"});
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a,v=+b.dataset.v;
+if(a=="vo"){vi=v;vs=0;vpl=1;op();vd();vt()}
+else if(a=="vm"){if(!v)vpl=!vpl;else vs=(vs+v+4)%4;vd();vt()}
+else if(a=="zi"){clearInterval(vtm);$("#mc").innerHTML=`<div class="stage"><div class="kb">${pp(SC[v][2])}</div></div><p class="cap"><b>${SC[v][0]}</b><br>${SC[v][1]}</p>`;op()}
+else if(a=="x")cl();
+else if(a=="rd"){b.classList.toggle("ok2");$("#rc").textContent=E(".th.ok2").length}
+else if(a=="ly"){b.classList.toggle("on");$(".mw").classList.toggle("no"+b.dataset.v)}
+else if(a=="tpl"){clearInterval(tti);ty=1891;tti=setInterval(()=>{ty++;if($("#rg"))$("#rg").value=ty;ut();if(ty>=1937)clearInterval(tti)},350)}});
+
+const h0=location.hash.slice(1);if(V[h0])cur=h0;render();
+</script></body></html>
